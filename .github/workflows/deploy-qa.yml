@@ -1,5 +1,0 @@
-- name: Salesforce SFDX CLI Action
-  uses: sfdx-actions/setup-sfdx@v1
-  with:
-    # Authorize a Salesforce org using an SFDX auth URL
-    sfdx-auth-url: https://webhooks.gearset.com/api/continuous-integration-job/0237b3f6-6f30-4601-8120-48b4c9532df6/github-webhook
