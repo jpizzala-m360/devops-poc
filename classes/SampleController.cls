@@ -5,7 +5,7 @@ public with sharing class SampleController {
     }
 
     public Integer doSomething() {
-        Integer myVar = 1;
+        Integer myVar = 4;
         myVar++;
         return myVar;
     }
