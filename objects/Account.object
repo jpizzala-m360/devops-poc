@@ -269,7 +269,9 @@
     </fields>
     <fields>
         <fullName>Client_Score__c</fullName>
+        <description>Here is a description</description>
         <externalId>false</externalId>
+        <inlineHelpText>Here is some help text</inlineHelpText>
         <label>Client Score</label>
         <precision>3</precision>
         <required>false</required>
