@@ -47,6 +47,10 @@
                 <behavior>Edit</behavior>
                 <field>Client_Score__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Customer_Score__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -80,10 +84,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Sic</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CleanStatus</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
