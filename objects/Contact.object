@@ -5,7 +5,7 @@
         <defaultValue>false</defaultValue>
         <description>Set this field to TRUE when the customer has verified their phone number</description>
         <externalId>false</externalId>
-        <inlineHelpText>UNDEFINED</inlineHelpText>
+        <inlineHelpText>Set this field to TRUE when the customer has verified their phone number</inlineHelpText>
         <label>Phone Verified</label>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Checkbox</type>
