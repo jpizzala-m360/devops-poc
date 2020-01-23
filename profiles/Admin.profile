@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?><Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <custom>false</custom>
     <userLicense>Salesforce</userLicense>
+    <classAccesses>
+        <apexClass>SampleController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SampleController_Tests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <applicationVisibilities>
         <application>standard__AppLauncher</application>
         <default>false</default>
@@ -1409,6 +1417,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Campaign.Notification_Frequency_Days__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Customer_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
