@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Phone_Verified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Set this field to TRUE when the customer has verified their phone number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>UNDEFINED</inlineHelpText>
+        <label>Phone Verified</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>
