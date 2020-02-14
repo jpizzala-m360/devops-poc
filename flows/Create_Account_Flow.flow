@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Create Account Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Account Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>InsertAccount</name>
+        <label>InsertAccount</label>
+        <locationX>486</locationX>
+        <locationY>161</locationY>
+        <assignRecordIdToReference>AccountRecord.Id</assignRecordIdToReference>
+        <connector>
+            <targetReference>Account_Successfully_Created</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>AccountName</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordCreates>
+    <screens>
+        <name>Account_Successfully_Created</name>
+        <label>Account Successfully Created</label>
+        <locationX>276</locationX>
+        <locationY>303</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>GoTo</name>
+            <fieldText>&lt;p&gt;&lt;a href=&quot;https://jp-devops-dev-dev-ed.lightning.force.com/{!AccountRecord.Id}&quot; target=&quot;_blank&quot;&gt;{!AccountRecord.Name}&lt;/a&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Create_Account</name>
+        <label>Create Account</label>
+        <locationX>215</locationX>
+        <locationY>123</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>InsertAccount</targetReference>
+        </connector>
+        <fields>
+            <name>AccountName</name>
+            <dataType>String</dataType>
+            <fieldText>Account Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;TRUE&lt;/p&gt;</errorMessage>
+                <formulaExpression>TRUE</formulaExpression>
+            </validationRule>
+        </fields>
+        <pausedText>&lt;p&gt;{!AccountRecord.Name}&lt;/p&gt;</pausedText>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Create_Account</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>AccountRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+</Flow>

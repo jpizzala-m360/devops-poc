@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?><Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <custom>true</custom>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Create_Account_Flow</flow>
+    </flowAccesses>
     <userLicense>Salesforce</userLicense>
     <fieldPermissions>
         <editable>true</editable>
